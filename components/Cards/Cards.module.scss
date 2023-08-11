@@ -1,0 +1,103 @@
+.grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    padding: 80px 0;
+}
+.card{
+    background:url(../../public/zzz.avif)no-repeat center/cover;
+    height: 500px;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 54px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card:hover{
+    opacity: .9;
+     background:linear-gradient( rgba(0, 0, 0, 0.152), rgba(0, 0, 0, 0.108)),
+     url(../../public/zzz.avif)no-repeat center/cover;
+     transition: .2s;
+}
+.container{
+    max-width: 1390px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.cards_grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+.grid_card1{
+    height: 240px;
+    background: url(../../public/kuku.jpg)no-repeat center/cover;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 44px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid_card1:hover{
+    opacity: .9;
+     background:linear-gradient( rgba(0, 0, 0, 0.152), rgba(0, 0, 0, 0.108)),
+     url(../../public/kuku.jpg)no-repeat center/cover;
+     transition: .2s;
+}
+.grid_card2{
+    height: 240px;
+    background: url(../../public/cofe.jpg)no-repeat center/cover;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 44px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid_card2:hover{
+    opacity: .9;
+     background:linear-gradient( rgba(0, 0, 0, 0.152), rgba(0, 0, 0, 0.108)),
+     url(../../public/cofe.jpg)no-repeat center/cover;
+     transition: .2s;
+}
+.grid_card3{
+    height: 240px;
+    background: url(../../public/tikva.jpg)no-repeat center/cover;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 44px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid_card3:hover{
+    opacity: .9;
+     background:linear-gradient( rgba(0, 0, 0, 0.152), rgba(0, 0, 0, 0.108)),
+     url(../../public/tikva.jpg)no-repeat center/cover;
+     transition: .2s;
+}
+.grid_card4{
+    height: 240px;
+    background: url(../../public/ph.jpg)no-repeat center/cover;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 44px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid_card4:hover{
+    opacity: .9;
+     background:linear-gradient( rgba(0, 0, 0, 0.152), rgba(0, 0, 0, 0.108)),
+     url(../../public/ph.jpg)no-repeat center/cover;
+     transition: .2s;
+    
+}

@@ -1,0 +1,29 @@
+.description {
+  background-color: white;
+  .description_cards {
+    padding-top: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 30px;
+    padding-bottom: 100px;
+    .description_set_card {
+      padding: 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      background: rgb(136, 211, 22);
+    
+      p {
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+      }
+
+    }
+  }
+}
