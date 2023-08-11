@@ -1,18 +1,17 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useBuyProductMutation, useGetProductIdQuery } from "../redux/Product";
-import Link from "next/link";
 import s from "./ProductMore.module.scss";
 import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
 import Header from "../Header/Header";
+import Comments from "../Comments/Comments";
 
 const ProductMore = () => {
   const [data, setData] = useState([]);
   const router = useRouter();
   const { id } = router.query;
   const [buyProduct, setbuyProduct] = useState({
-    // id: Date.now(),
     firstName: "",
     lastName: "",
     addres: "",
@@ -74,13 +73,15 @@ const ProductMore = () => {
                     width={350}
                     height={350}
                   />
-                  <p className="">Заголовок : {data.title}</p>
-                  <p>Страна : {data.count}</p>
-                  <p>Город : {data.city}</p>
-                  <p>Описание : {data.description}</p>
-                  <p>
+                  <p className={s.text}>Заголовок : {data.title}</p>
+                  <p className={s.text}>Страна : {data.count}</p>
+                  <p className={s.text}>Город : {data.city}</p>
+                  <p className={s.text}>Описание : {data.description}</p>
+                  <p className={s.text}>
                     Цена : <span style={{ color: "white" }}>{data.price}$</span>
                   </p>
+                  <br />
+                  <Comments id={id}/>
                   <div className=""></div>
                 </div>
               </div>
@@ -115,6 +116,7 @@ const ProductMore = () => {
                 placeholder="Телефон"
               />
               <MyButton onClick={handleUser}>Купить сейчас</MyButton>
+              
             </div>
           </div>
         </div>

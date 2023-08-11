@@ -14,7 +14,7 @@ const Product = () => {
   const [videoPerPage] = useState(6);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // Состояние для отслеживания типа сортировки: "asc" - по возрастанию, "desc" - по убыванию
-
+ 
   let value;
   if (typeof window !== "undefined") {
     value = localStorage.getItem("id") || "";

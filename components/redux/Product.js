@@ -99,7 +99,25 @@ export const productApi = createApi({
 			}),
 			invalidatesTags:[{ type: 'Delbuy', id: 'DELB' }]
 		}),
-	})
-	
+		getComment: build.query({
+			query: () => 'comments',
+			providesTags: (result) =>
+				result
+					? [
+						...result.map(({ id }) => ({ type: 'Com', id })),
+						{ type: 'Com', id: 'COMS' },
+					]
+					: [{ type: 'Com', id: 'COMS' }],
+		}),
+		addComments: build.mutation({
+			query: (body) => ({
+				url: 'comments',
+				method: 'POST',
+				body,
+			}),
+			invalidatesTags: [{ type: 'Com', id: 'COMS' }]
+		}),
+
+	}),
 })
-export const { useGetProductQuery, useAddUserMutation, useSignInMutation, useAddProductsMutation, useGetFolloversQuery, useAddFolloversMutation, useDeleteFolloversMutation, useDeleteProductMutation, useGetProductIdQuery, useBuyProductMutation, useGetBuysQuery,useDeleteBuyMutation } = productApi
+export const { useGetProductQuery, useAddUserMutation, useSignInMutation, useAddProductsMutation, useGetFolloversQuery, useAddFolloversMutation, useDeleteFolloversMutation, useDeleteProductMutation, useGetProductIdQuery, useBuyProductMutation, useGetBuysQuery,useDeleteBuyMutation,useGetCommentQuery, useAddCommentsMutation } = productApi

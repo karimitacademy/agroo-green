@@ -22,6 +22,10 @@ const Header = () => {
       window.location.href = 'http://localhost:3001'
     }
   }
+  let value;
+  if (typeof window !== "undefined") {
+    value = localStorage.getItem("id") || "";
+  }
 
   return (
     <header className={s.header}>
@@ -52,6 +56,9 @@ const Header = () => {
         </a>
         <Link className={s.links_text} href="/AddProduct/FolloversPage">
           Корзина
+        </Link>
+        <Link className={s.links_text} href={`/Product/${value}`}>
+          Профиль
         </Link>
 
 
