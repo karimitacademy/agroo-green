@@ -1,19 +1,21 @@
 .grids {
     display: grid;
     grid-template-columns: 1fr;
-  
+  padding-left: 500px;
     gap: 20px;
     margin: 0 auto;
     .cards {
-      width: 100%;
+      width: 45%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
       height: 600px;
       gap: 10px;
       border-radius: 15px;
-      color: white;
+      background-color: rgb(136, 211, 22);
+      color: rgb(255, 255, 255);
       font-family: Arial, Helvetica, sans-serif;
       p {
         font-size: 25px;
@@ -38,6 +40,6 @@
   .body{
    width: 100%;
    height: 130vh;
-    background: rgb(136, 211, 22);
+    background: rgb(255, 255, 255);
   }
   

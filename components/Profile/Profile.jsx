@@ -5,6 +5,7 @@ import { Button, Drawer } from 'antd';
 import MyInput from '../UI/input/MyInput';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import ProfileUpdate from './ProfileUpdate';
 
 const Profiles = () => {
     const [profile, setProfile] = useState([])
@@ -19,10 +20,14 @@ const Profiles = () => {
         count: "",
         city: ""
     })
+    let value;
+  if (typeof window !== "undefined") {
+    value = localStorage.getItem("id") || "";
+  }
     useEffect(()=>{
         const getProfile = async()=>{
             try{
-            const resp = await axios(`http://localhost:3000/profile/${id}`)
+            const resp = await axios(`http://localhost:3000/profile/${value}`)
             setProfile(resp.data)
             console.log(resp)
             setTt(true)
@@ -63,6 +68,7 @@ const Profiles = () => {
             <p style={{fontSize:'25px',marginBottom:'6px'}}>Фамилия : {profile.lastName}</p>
             <p style={{fontSize:'25px',marginBottom:'6px'}}>Страна : {profile.count}</p>
             <p style={{fontSize:'25px',marginBottom:'6px'}}>Город : {profile.city}</p>
+            <ProfileUpdate id={id}/>
         </div>
     ) 
     :
