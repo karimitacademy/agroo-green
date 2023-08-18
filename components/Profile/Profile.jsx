@@ -103,7 +103,7 @@ const Profiles = () => {
             <br />
             <br />
             <Button
-              style={{ background: "green" }}
+              style={{ background: "rgb(136, 211, 22)" }}
               type="primary"
               onClick={showDrawer}
             >
@@ -147,7 +147,9 @@ const Profiles = () => {
               />
               <br />
               <br />
-              <MyButton onClick={createProfile}>Создать</MyButton>
+              <Button style={{background: "rgb(136, 211, 22)", width: "300px", height:"45px", color: "white"}} onClick={createProfile}>
+                    Создать
+                </Button>
             </Drawer>
           </>
         )}

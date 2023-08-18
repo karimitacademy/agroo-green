@@ -39,7 +39,7 @@ const ProfileUpdate = ({ id }) => {
             <br />
             <br />
             <br />
-            <Button style={{ background: 'green' }} type="primary" onClick={showDrawer}>
+            <Button style={{ background: 'rgb(136, 211, 22)' }} type="primary" onClick={showDrawer}>
                 Редактировать Профиль
             </Button>
             <Drawer style={{ background: "grey",zIndex:'9999999999999' }} width='500px' title="Basic Drawer" placement="right" onClose={onClose} open={open}>
@@ -55,9 +55,9 @@ const ProfileUpdate = ({ id }) => {
                 <MyInput placeholder='Город' onChange={e => setCreate({ ...create, city: e.target.value })} />
                 <br />
                 <br />
-                <MyButton onClick={createProfile}>
+                <Button style={{background: "rgb(136, 211, 22)", width: "300px", height:"45px", color: "white"}} onClick={createProfile}>
                     Создать
-                </MyButton>
+                </Button>
             </Drawer></>
     );
 };

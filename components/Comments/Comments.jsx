@@ -42,13 +42,15 @@ const { data = [], isLoading } = useGetCommentQuery();
 const [addComments, { isError }] = useAddCommentsMutation();
 const handleProduct = async (e) => {
     e.preventDefault();
-      await addComments({
+     const resp =  await addComments({
         id: Date.now(),
         productId: id,
         firstName: profile.firstName,
         lastName: profile.lastName,
         message: comment.message
-       }).unwrap();
+       }
+    ).unwrap();
+    alert('Вы успешно добавили отзыв')
   };
     return (
         <>
