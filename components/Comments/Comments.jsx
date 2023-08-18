@@ -55,7 +55,7 @@ const handleProduct = async (e) => {
 
             <Space>
 
-                <Button style={{ width: '300px', height: '45px', fontSize: "18px" }} type="primary" onClick={showDrawer}>
+                <Button style={{ width: '300px', height: '45px', fontSize: "18px" }} type="default" onClick={showDrawer}>
                     Отзывы
                 </Button>
             </Space>

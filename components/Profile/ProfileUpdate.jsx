@@ -42,7 +42,7 @@ const ProfileUpdate = ({ id }) => {
             <Button style={{ background: 'green' }} type="primary" onClick={showDrawer}>
                 Редактировать Профиль
             </Button>
-            <Drawer style={{ background: "green" }} width='500px' title="Basic Drawer" placement="right" onClose={onClose} open={open}>
+            <Drawer style={{ background: "grey",zIndex:'9999999999999' }} width='500px' title="Basic Drawer" placement="right" onClose={onClose} open={open}>
                 <MyInput placeholder='имя' onChange={e => setCreate({ ...create, firstName: e.target.value })} />
                 <br />
                 <br />
